@@ -1,0 +1,406 @@
+// Remove Duplicate from an array
+
+let arr = [1,2,3,5,6,3,2,8,7];
+console.log("first = ", [...new Set(arr)])		// 1st Logic
+
+let b = []
+let len = arr.length;
+for(let i=0; i<len; i++){
+	if(b.indexOf(arr[i]) === -1){
+		b.push(arr[i]);
+  }
+}
+console.log("Second= ", b)						// 2nd Logic
+
+arr.sort();
+let c = []
+let _temp;
+for(let i=0; i<len;i++){
+	if(arr[i] !== _temp){
+		c.push(arr[i]);
+		_temp = arr[i];
+  }
+}
+console.log("Third = ", c)						// 3rd Logic
+
+let obj = {}
+for(let i of arr){
+	obj[i] = true
+}
+let d = Object.keys(obj)
+console.log("Fourth = ", d)						// 4th Logic
+
+######################################
+
+// Copy an array and assign into another variable
+
+let a = [2,6,9,6,15,11,4];
+let len = a.length;
+let b = Object.assign([], a)
+let c = [...a];									
+
+console.log("first = ", b)						// 1st Logic
+console.log("Second = ", c)						// 2nd Logic
+
+let d = []
+for(let i = 0; i<len; i++){
+	d.push(a[i]);
+}
+console.log("Third = ", d);						// 3rd Logic
+
+######################################
+
+// Sort an array
+
+let arr = [2,6,22,9,1,15,11,4,18,3];
+let newfun = (a) => {
+	return a.sort((a,b) => a - b )
+}
+console.log("Sorted = ", newfun(arr))			// 1st Logic
+
+
+// Sort an array without using and array function
+let arr = [2,6,22,9,1,15,11,4,18,3];
+let len = arr.length;
+let _temp;
+for (let i = 0; i < len; i++) {
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] > arr[j]) {
+      _temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = _temp;
+    }
+  }
+}
+console.log("Sorted Array = ", arr);			// 2nd Logic
+
+for(let i = 0; i < len; i++){
+	for(let j = i+1; j<len; j++){
+  	if(arr[i]>arr[j]){
+      [arr[i],arr[j]]= [arr[j],arr[i]]
+    }
+  }
+}
+console.log(arr)								// 3rd Logic
+
+######################################
+
+// Find the smallest missing positive number
+Input: nums = [1,2,0];
+Output: 3
+Input: nums = [3,4,-1,1];
+Output: 2
+Input: numbs = [7,8,9,11,12];
+Output: 1
+
+function firstmissingpositive(arr){
+	arr = [...new Set(arr)];
+	arr = arr.filter((items)=>(items>0)).sort((a,b)=>a-b);
+	let j = 1;
+	for(let i = 0; i< arr.length; i++){
+		if(j === arr[i]){
+			j++
+		}else{
+			return j;
+		}
+	}
+	return j;
+}
+console.log(firstmissingpositive(nums))
+
+######################################
+
+// Find minimum and maximum number from an array
+
+let nums = [17,5,1,7,8,19,11,12];
+let arr = nums.sort((a,b)=>a-b);
+console.log("Minimum Number = ", arr[0]);					// 1st Logic
+console.log("Maximum Number = ", arr[arr.length-1]);		// 2nd Logic
+console.log(Math.min.apply(null, nums))						// 3rd Logic
+console.log(Math.max.apply(null, nums))						// 4th Logic
+console.log(Math.min(...nums))								// 5rd Logic
+console.log(Math.max(...nums))								// 6th Logic
+
+minValue = Infinity;
+maxValue = -Infinity;
+function minValues(nums){
+  for(let i=0; i<nums.length; i++){
+    if(nums[i]<minValue){
+      minValue = nums[i];
+    }
+  }
+  return minValue
+}
+console.log("Minimum Value = ", minValues(nums));				// 7th Logic
+
+let min = nums.reduce((a,b)=>{return Math.min(a,b)})
+console.log(min)											// 8th Logic
+
+######################################
+
+// Reverse a String
+var a = "Ankit";
+console.log(a.split("").reverse().join(""));		// 1st Logic
+
+function reverseString(str){
+	  var newString = "";
+	  for(var i = str.length - 1; i >=0; i--){
+		newString += str[i];
+	  }
+	  return newString;
+}
+console.log(reverseString(a));				// 2nd Logic
+
+let arr = a.split("");
+let newarr = [];
+for(let i=0; i<arr.length; i++){
+	newarr.push(arr.pop())
+}
+console.log(newarr.join(""));				// 3rd logic
+
+######################################
+
+find first duplicate from an array and return its index?
+
+const firstDuplicate = arr => {
+   for(let i = 0; i < arr.length; i++){
+      if(arr.lastIndexOf(arr[i]) !== i){
+         return i;
+      };
+   };
+   return -1;
+}
+console.log(firstDuplicate([3, 5, 6, 8, 5, 3])); // 0
+console.log(firstDuplicate([0, 1, 2, 3, 4, 4, 5])); // 4
+console.log(firstDuplicate([0, 1, 1, 2, 3, 4, 4, 5])); // 1
+console.log(firstDuplicate([0, 1, 2, 3, 4, 9, 5])); // -1
+
+######################################
+
+find the first duplicate value from an array
+
+const arr = [1,2,3,4,3,2,5,4];
+function firstDuplicate(arr) {
+    let min = -1;
+    let set = new Set();
+    for(let i = arr.length - 1; i >= 0; i--){
+        if (set.has(arr[i]))
+            min = i;
+        else 
+            set.add(arr[i]);
+    }
+    if (min != -1)
+      console.log("The first repeating element is " + arr[min]);
+    else
+      console.log("There are no repeating elements");
+}
+firstDuplicate(arr);
+
+######################################
+
+let inputArr = [11, 7, 2, 4, 17, 14, 12, 5, 22, 1, 10, 16, 21, 6];
+let num = 12;
+
+const findNumbers = (arr, num) => {
+	let newarr = [];
+	let len = arr.length;
+	for(let i=0; i<len; i++){
+		for(let j = i+1; j<len; j++){
+			if(arr[i]+arr[j] == num){
+			newarr.push([arr[i], arr[j]]);
+			newarr.push([arr[j], arr[i]]);
+		  }
+		}
+  }
+  return newarr;
+}
+
+console.log(findNumbers(inputArr, num));
+// Output = [[11,1],[7,5],[2,10],[5,7],[1,11],[10,2]]
+
+######################################
+
+get the unique object on the basis of name
+
+let arrofobj = [{name:"abc", age:27},{name:"pqr", age:27},{name:"abc", age:27},{name:"abc", age:27}]
+const uniquearr = [...new Map(arrofobj.map((item)=>[item["name"],item])).values()];
+console.log(uniquearr)
+
+######################################
+
+Find duplicates number
+
+const arry = [1, 2, 1, 3, 4, 3, 5];
+
+const toFindDuplicates = arry => arry.filter((item, index) => arry.indexOf(item) !== index)
+const duplicateElements = toFindDuplicates(arry);
+console.log(duplicateElements);							// 1st Logic
+
+
+
+function toFindDuplicates(arry) {
+    const uniqueElements = new Set(arry);
+    const filteredElements = arry.filter(item => {
+        if (uniqueElements.has(item)) {
+            uniqueElements.delete(item);
+        } else {
+            return item;
+        }
+    });
+
+    return [...new Set(uniqueElements)]
+}
+const arry = [1, 2, 1, 3, 4, 3, 5];
+const duplicateElements = toFindDuplicates(arry);
+console.log(duplicateElements);							//2nd Logic
+
+
+// Output: [1, 3]
+
+######################################
+
+Third Higest Number from an array
+
+function thirdLargest(arr, arr_size){
+    /* There should be atleast three elements */
+    if (arr_size < 3){
+        console.log(" Invalid Input ");
+        return;
+    }
+    // Find first largest element
+    let first = arr[0];
+    for (let i = 1; i < arr_size ; i++){
+        if (arr[i] > first){
+            first = arr[i];
+		}
+	}
+   
+    // Find second largest element
+    let second = Number.MIN_VALUE;
+    for (let i = 0; i < arr_size ; i++){
+        if (arr[i] > second && arr[i] < first){
+            second = arr[i];
+		}
+	}
+   
+    // Find third largest element
+    let third = Number.MIN_VALUE;
+    for (let i = 0; i < arr_size ; i++){
+        if (arr[i] > third && arr[i] < second){
+            third = arr[i];
+		}
+	}
+    console.log("The third Largest element is ", third);
+}
+    let arr = [12, 13, 1, 10, 34, 16];
+    let n = arr.length;
+    thirdLargest(arr, n);
+	
+###########################################################	
+
+Push All the 0th element to the last
+
+let arr = [8,5,0,10,0,20];
+function moveZeros(arr){
+	const temp = [];
+	let c = 0;
+	for(let el of arr){
+		if(el===0) c++;
+	}
+	for(let el of arr){
+		if(el !== 0){
+			temp.push(el);
+		}
+	}
+	for(let i = 0; i<c; i++){
+		temp.push(0);
+	}
+	return temp;
+}
+console.log(moveZeros(arr))						//1st Logic
+
+
+function moveZeros(arr){
+	let c = 0;
+	const n = arr.length
+	for(let i = 0; i<n; i++){
+		if(arr[i] !== 0){
+			[arr[i], arr[c]] = [arr[c], arr[i]];
+			c++;
+		}
+	}
+	return arr;
+}
+console.log(moveZeros(arr))						//2nd Logic
+
+###########################################################
+
+check if pair with given sum is present
+// [2,1,3,6] = 3
+
+function pair(arr, sum){
+	const n = arr.length;
+	for(let i = 0; i < n; i++){
+		for(let j = i+1; j<n; j++){
+			if(arr[i]+arr[j] === sum){
+			  return true;
+			}
+		}
+	}
+	return false;
+}
+
+console.log(pair([2,1,3,6], 3))
+
+###########################################################	
+
+let arr = [10,23,19,20,23,9];
+let arr2 = [25,18,100,99];
+console.log("Main Array = ", arr);
+arr.pop();
+console.log("Pop = ", arr);
+arr.push(999);
+console.log("Push = ", arr);
+arr.sort();
+console.log("Sort = ", arr);
+arr.reverse();
+console.log("Reverse = ", arr);
+arr.shift();
+console.log("Shift = ", arr);
+arr.unshift(999);
+console.log("Unshift = ", arr);
+
+const slice = arr.slice(1,4); //arr.slice(1); && arr.slice(-2);
+//arr.splice(2,0,99,100);//arr.splice(2,1,99,100); && arr.splice(2,2,99,100); && arr.splice(-2,1,99,100); && arr.splice(2,2);
+const find = arr.find((age)=>(age>18));
+const filter = arr.filter((num)=>(num>18));
+const concat = arr.concat(arr2); //arr.concat(arr2,arr3,..);
+const tostring = arr.toString();
+const some = arr.some((age)=>(age>18));
+const every = arr.every((age)=>(age>18));
+const isarray = Array.isArray(arr)
+const findindex = arr.findIndex((age)=>(age>18));
+const includes = arr.includes(19);
+const indexof = arr.indexOf(23,2);//arr.indexOf(23);
+const lastindexof = arr.lastIndexOf(23,3);//arr.lastIndexOf(23)
+const join = arr.join("-");
+const fill = arr.fill(99);
+const valueof = arr.valueOf(); //Default to return same array
+
+
+console.log("Find = ", find);
+console.log("FindIndex = ", findindex);
+console.log("filter = ", filter);
+console.log("Some = ", some);
+console.log("Every = ", every);
+console.log("Includes = ", includes);
+console.log("IndexOf = ", indexof);
+console.log("LastIndexOf = ", lastindexof);
+console.log("Slice = ", slice);
+console.log("Splice = ", arr);
+console.log("Concat = ", concat);
+console.log("Join = ", join);
+console.log("Fill = ", fill);
+console.log("Valueof = ", valueof);
+console.log("tostring = ", tostring);
+console.log("Isarray = ", isarray);

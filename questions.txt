@@ -1,0 +1,277 @@
+2) What is enum in typescript
+3) What is Typescript?
+
+5) What is box model
+6) What are the limitations of CSS
+7) what is flex?
+8) Div vs span
+9) Create a tooltip using css
+10) Difference between Div and p tag
+
+
+##:: ReactJS ::##
+17) Implementing timer in React: HH:MM:SS
+18) implementing timer in react
+19) Service disconnection handling in React JS if Auth Service/Order Service failes- Write code to handle
+20) Service disconnection handling in Node/Java if Auth Service/Order Service failes - Write code to handle
+21) Service disconnection handling at Databae level if Auth Service/Order Service failes - Write code to handle
+23) Explain Client Side programming in React JS - Write code for Client side programming
+25) Explain Server Side programming in React JS - Write code for Server side programming
+
+##:: Redux ::##
+26) Define the term Redux in React
+27) What is the ‘Store’ feature in Redux?
+28) How to stop frequest refresh of Components when using Redux
+29) Explain Reducer concept in React JS
+30) Difference between Reducer concept and Hooks in React JS
+31) What is redux and how it work with react?
+
+##:: Hooks ::##
+37) Explain Hooks role in Performance improvement in React JS
+38) What is react hooks ?						
+39) Methods in react hook ?						
+40) What is the useMemo and use case of it ?
+
+
+##:: Components ::##
+42) Explain Fuctional Components approach in React JS
+43) Why Functional Componets approach is faster than Class
+44) Explain Class components approach in React JS
+45) Explain the term stateless components
+46) How to use Reusable compoenets in React JS
+47) How to reducers/Redux with Functional components
+48) Given the scenario to decrement a counter variable on click of a button and stop when zero is reached in functional component?
+49) Pure component vs component in React
+50) How to stop child components re-rendring
+51) Create a table component by user given numbers of rows and columns via input
+
+##:: API ::##
+52) Explain effective use of service/API handling
+53) Explain the Retry in API Calls in React js
+54) Explain Context API in React JS
+55) Program - fetching data from API and displaying
+56) Challenges faced in API Integration/ Token issues, Expiry
+
+##:: Performance Improvements ::##
+57) Why Server side programming is faster in React JS
+58) Explain Performance measurement in Reacct JS
+59) Explain Immutability, Bundling, Minification in Performance improvement
+60) Explain Fragments to improve performance
+61) How to handle various events in Server side programming
+62) Explain performance improvement techniques in React js
+63) Explain effective handling of Mapstatetoprops in React js
+
+##:: Variables and scope ::##
+64) Differences between var, let and const? Output questions using var and const.
+65) Explain scopes in Javascript?
+66) What do you understand by an instance variable and a local variable
+
+##:: Closure ::##
+67) what is a Closure and their  benefits and drawback. Give one realtime scenario where we can use it ?
+68) What is closure? Can you write closure? Output questions on Closures.
+	var e= 30;
+	const obj = function Outer() {
+		var e= 10;
+		function Inner() {
+			var e=20;
+		}
+	}
+	var a = obj.Inner();
+	a();
+	console.log (e);
+
+##:: Timers ::##
+69) setInterval
+70) How do you write setTimeout function with var and let? Output questions with different scenarios.
+71) console.log('Hi');
+	setTimeout(function test() { 
+	  console.log('test');
+	}, 1);
+	console.log('Bye');
+	console.log('Bye');
+	console.log('Bye');
+	setTimeout(function test() {
+		console.log('test2');
+	}, 0);
+	console.log('Bye');
+	console.log('Bye');
+	console.log('Bye');
+
+##:: Array ::##
+72) How do you update values of the array     const arr = [1,2,5];
+73) find the element in array (big o notation )
+74) array = [2,5,7,8,3,9,1] :- maximum difference between array elements of those  --- asked the approach
+75) Remove duplicates in a given array
+76) write a program to check the number of occurrence of a character of a string
+77) Write the code for palindrome and check whether string "abccba" is a palindrome or not
+
+##:: Memoization ::##
+78) memoization in javascript
+79) Program - sum of numbers using memoization
+
+##:: Hoisting ::##
+80) Hoisting in javascript
+81) console.log(counter);
+	var counter = 1
+	
+82) let x = 20, y = 10;
+	let result = add(x, y);
+	console.log(result);
+	function add(a, b) {
+		return a + b;
+	}
+
+##:: Functions ::##
+83) what is chaining in javascript
+84) What is the different between Call, apply and bind
+85) (function(){
+		var a = b = 3;
+	})();
+86) expression();
+	var expression = function() {
+		console.log('Will this work?');
+	};
+87) var myObject = {
+		foo: ""bar"",
+		func: function() {
+			var self = this;
+			console.log(""outer func:  this.foo = "" + this.foo);
+			barbar
+			console.log(""outer func:  self.foo = "" + self.foo);
+			barbar
+			(function() {
+				console.log(""inner func:  this.foo = "" + this.foo);
+				barbar
+				console.log(""inner func:  self.foo = "" + self.foo);
+				barbar
+			}());
+		}
+	};
+	myObject.func();
+
+88) What are currying functions ? What will be the output for mul(2)(3)
+
+##:: Object ::##
+89)  How many ways we can create object
+90) Can we update an object declared  using const 
+
+##:: Promise ::##
+90) What is Promise
+
+##:: Storage ::##
+91) What is localstorage and session storage
+92) Different b/w session storage and local storage and cookies ?
+93) What part of memory - Stack or Heap - is cleaned in garbage collection process?
+
+##:: Forms ::##
+94) Formvalidation.
+
+##:: Copying ::##
+95) difference between shallow copy and deep copy
+
+##:: Events ::##
+96) different b/w event bubbling and event capturing, how do we prevent
+
+##:: Data structure ::##
+97) What are the different data structure in javascript?
+
+##:: General Concepts ::##
+98) What is Map and how can we set the value in Map?
+99) How do we check if request coming from the authentication resourc
+100) what is debouncing and intercepter
+101) what is treeshaking 
+102) What is the main objective of garbage collection?
+
+##:: Design Patterns in JavaScript ::##
+103) what is the d/w Decorator pattern or maybe a Dependency Injection Pattern,
+104) Which Design Patterns have You Used in Your  Project
+
+##:: Class and prototype inheritance ::##
+105) implement inheritance using ES6 class
+106) implement inheritance using ES5 functions
+107) Pelindrom script
+
+
+##:: Recent Interview Questions ::##
+
+108) 1. Write a code in react to configure fieldstype, regex, fieldName. Validate regex like if we select fieldstype as telephone then validate entered value using regex.
+109) Is react reactive in nature?
+110) What is npm?
+111) What is nvm?
+112) What is webpack?
+113) Which are different position properties?
+114) What is sass?
+115) Difference between css and scss.
+116) Flex layout and grid layout.
+117) How will you manage css in big applications?
+118) Reverse the string - 'My name is Jai Kumar Rathore' as - 'Rathore Kumar Jai is name My' || without using any inbuilt function
+119) Lodash library - Create own get method
+	    1. get(object, 'obj.val1.val2', 'Jai')
+        1. should return default value as - 'Jai' if 'obj.val1.val2' not found in object, passed as an argument, if found should return the value
+120) Event Looping
+121) 	console.log('evnt 1');
+		setTimeout(()=> { console.log('evnt 2'); },0);
+		console.log('evnt 3')
+122) Event Bubbling - create html file and show how event bubbling will work ||
+	    1. create 4 buttons || Need to call single function using event bubbling
+123) Throttling  and Debouncing
+125) Question about react hoooks UseCallback and UseMemo
+126) create the objects in diff ways
+127) design patterns in JS
+128) create prototype chaining
+129) higher order functions are there use cases
+130) reverse the string program
+131) multiply the array values without using multiply sign
+132) usage of forEach
+133) hoisting and output questions on this
+134) Closure and output questions
+135) create counter in React app
+137) Ways to include javscripts in your application?
+138) Best place to iinclude scripts?
+139) how Async, Defer and normal script import works and what are the different conditions when you choose particular type?
+140) Image loading performance improvement?
+141) setTimeout and setInterval
+142) what is Psuedo class and psuedo elements?
+143) what is Email Template? what things you should keep in mind in terms of Rmail template
+144) JS file caching how it caches the js file.?
+145) If js is already cached, but with new deployment how to make sure that latest js script is loaded and not the cached JS file?
+146) What is web worker and how to implement it?
+147) Draw circle using CSS and HTML
+148) Advantage of inline script and css compared to external ?
+149) Bootstrap usage, what it is and how to use it.
+150) What is SSR?
+151) What is CSR?
+152) Difference between SSR and CSR?
+153) How do you achieve SSR ?
+154) First Use case discussions 
+
+
+##:: General/ Project related questions ::##
+155) Introduction about Myself 
+156) Challenges faced in  Project
+157) Explain Three Tier architecture in handling the large scale project
+158) Explain the Milestone planning structure in project planning
+159) Steps to follow from Statement of work to Application Release
+160) React JS Unit Testing process,  list of tools for unit testing,code coverage percentage on Unit testing
+161) How to manage the Team in early delivery,  How to plan the early  delivery
+162) How to create the Design and Mock up scrteens , any tool for UI Mock up 
+163) Leading the UI Team on the Sample mock ups, getting the business sign off, approval, customer discussions
+164) list of tools/integrations performed in React js, communication with other teams in Integration
+165) List of issues discussed with the Service Team
+166) Sprint planning, resources movement, sprint duration - features management
+167) Devops (AZURE) - What the tasks performed
+168) Devops- Pipelines creation, Repository management tasks, issues, issues with peers
+169) Issues in Unit Testing in React JS, steps  fixing the issues in Unit Testing
+170) Issues in Smoke testing a React JS Build, steps to solve the issues in Pre-prod, Customer communication on the issues
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,178 @@
+Introduce yourself
+Virtual DOM and difference between Virtual and Real DOM
+React JS Life Cycle
+How to increase application performance
+React Portal
+New Feature in React 18
+HOC
+Error Handling
+Controlled and Uncontrolled Component
+Redux and Redux Thunk
+How to stop frequest refresh of Components when using Redux
+Explain Server Side programming in React JS - Write code for Server side programming
+Given the scenario to decrement a counter variable on click of a button and stop when zero is reached in functional component?
+How to stop child components re-rendring
+Create a table component by user given numbers of rows and columns via input
+
+
+##:: API ::##
+52) Explain effective use of service/API handling
+53) Explain the Retry in API Calls in React js
+54) Explain Context API in React JS
+55) Program - fetching data from API and displaying
+56) Challenges faced in API Integration/ Token issues, Expiry
+
+
+##:: Performance Improvements ::##
+57) Why Server side programming is faster in React JS
+58) Explain Performance measurement in Reacct JS
+59) Explain Immutability, Bundling, Minification in Performance improvement
+60) Explain Fragments to improve performance
+61) How to handle various events in Server side programming
+62) Explain performance improvement techniques in React js
+63) Explain effective handling of Mapstatetoprops in React js
+
+
+Explain Event propogation in Javascript
+memory leaks
+what are http interceptors
+explain the concept of dependency injection
+
+
+
+New feature in ES6
+Clousures and advantage of Clousures
+Hoisting
+Var, let and const
+Reduce method
+Function Currying
+	console.log(add(5)(2)(4)(8)())
+Immediatly Invoked Function (IIFE)
+call(), apply() and bind()
+Promises & Async, Await
+Deep Copy and Shallow Copy
+Diff between freeze and seal
+Difference between slice vs splice
+what is chaining in javascript
+
+
+##:: Array ::##
+72) How do you update values of the array     const arr = [1,2,5];
+73) find the element in array (big o notation )
+74) array = [2,5,7,8,3,9,1] :- maximum difference between array elements of those  --- asked the approach
+75) Remove duplicates in a given array
+76) write a program to check the number of occurrence of a character of a string
+77) Write the code for palindrome and check whether string "abccba" is a palindrome or not
+
+
+OUTPUT QUESTION:
+
+-1. 	let x = 20, y = 10;
+	let result = add(x, y);
+	console.log(result);
+	function add(a, b) {
+		return a + b;
+	}
+
+0.	console.log('Hi');
+	setTimeout(function test() { 
+	  console.log('test');
+	}, 1);
+	console.log('Bye');
+	console.log('Bye');
+	console.log('Bye');
+	setTimeout(function test() {
+		console.log('test2');
+	}, 0);
+	console.log('Bye');
+	console.log('Bye');
+	console.log('Bye');
+
+1. var trees = ["pine","apple","oak","maple","cherry"];
+   delete trees[3];
+   console.log(trees.length);
+   console.log(trees[3]);
+
+2. console.log("10"+20+30);
+   console.log(+"10"+10+20);
+   console.log(-"10"+10+20);
+   console.log("55"-5+"5");
+
+3. function abc(){
+  if(!k){
+     k = 10;
+  }
+  var k;
+  console.log(k)
+
+4. // Find value of d using spread operator.
+const obj = {
+    a: 10,
+    b: {
+      c: {
+        d: 'p'
+      }
+    }
+};
+
+5. var a = [1, 2, 3];
+a[10] = 99;
+console.log(a);
+console.log(a[6]);
+
+6. const abc;
+abc=10;
+console.log(abc);
+
+
+
+JS TECHNICAL QUESTION:
+
+1. Reverse a String without using any predefined JS function
+
+2. Push All the 0th element to the last
+   let arr = [8,5,0,10,0,20];
+   function moveZeros(arr){ ..... }
+   console.log(moveZeros(arr))
+
+3. Find the smallest missing positive number
+   Input: nums = [1,2,0]; // 3
+   Input: nums = [3,4,-1,1]; // 2
+   Input: numbs = [7,8,9,11,12]; // 1
+   function firstmissingpositive(arr){ ..... }
+   console.log(firstmissingpositive(nums))
+
+4. Copy an array and assign into another variable
+   let a = [2,6,9,6,15,11,4];
+
+5. check if pair with given sum is present
+   [2,1,3,6] = 3
+   function pair(arr, sum){ ..... }
+   console.log(pair([2,1,3,6], 3))
+
+6. get the unique object on the basis of name
+   let arrofobj = [{name:"abc", age:27},{name:"pqr", age:27},{name:"abc", age:27},{name:"abc", age:27}]
+
+7. let inputArr = [11, 7, 2, 4, 17, 14, 12, 5, 22, 1, 10, 16, 21, 6];
+   let num = 12;
+   const findNumbers = (arr, num) => { ..... }
+   console.log(findNumbers(inputArr, num));
+   // Output = [[11,1],[7,5],[2,10],[5,7],[1,11],[10,2]]
+
+8. //find the count of duplicate
+    function count(str){ ..... }
+    var str = ["banana", "apple", "banana", "mango", "apple", "banana", "mango"]
+    console.log(count(str))
+    {
+       apple: 2,
+       banana: 3,
+       mango: 2
+    }
+
+9. var input = [{brand:"apple", model:"iphone12", price:70000},
+		{brand:"apple", model:"iphone11", price:50000},
+		{brand:"motorola", model:"g4", price:15000},
+		{brand:"samsung", model:"gx", price:18000},
+		{brand:"samsung", model:"gx2", price:25000}
+	       ]
+Output: {apple:50000, motorola:15000, samsung:18000}
